@@ -11,6 +11,10 @@ const Text = styled.p`
   line-height: 32px;
 `
 
+const ItalicText = styled.p`
+  font-style: italic;
+`
+
 const Img = styled.img`
   width: 300px;
   display: block;
@@ -133,9 +137,23 @@ const SupportOurMissionPage = () => (
     <h4>I have another question.</h4>
     <p>
       No problem, just email us at members@sensive.xyz. We’d love to hear from
-      you.{" "}
+      you.
     </p>
     <Line />
+    <ItalicText>
+      Your support of Sensive does not constitute a charitable donation, and
+      your contribution is not eligible for a tax deduction. Our membership
+      program is designed to connect our community and sustain Sensives mission
+      to inspire a greater understanding in mental health.
+    </ItalicText>
+    <ItalicText>
+      Members will be subscribed to a members-only mailing list. This is to let
+      you know when member events are happening, how to access new features
+      before anyone else, and other announcements related to being a member.
+      You’ll also receive emails from our payment processor Stripe regarding
+      your payment, including invoices and renewal notices. Your email address
+      and personal information will never be given to anyone for any purpose.
+    </ItalicText>
   </Layout>
 )
 

@@ -22,7 +22,7 @@ const Main = styled.div`
   flex: 1;
   margin: 0 auto;
   max-width: 960px;
-  padding: 0 1.0875rem 1.45rem;
+  padding: 48px 0;
 `
 
 const Layout = ({ children }) => {
