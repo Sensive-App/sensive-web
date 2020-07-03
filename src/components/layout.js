@@ -14,6 +14,12 @@ import { Footer } from "./footer"
 import "./layout.css"
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const Main = styled.div`
+  flex: 1;
   margin: 0 auto;
   max-width: 960px;
   padding: 0 1.0875rem 1.45rem;
@@ -21,11 +27,11 @@ const Wrapper = styled.div`
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <Wrapper>
       <Header />
-      <Wrapper>{children}</Wrapper>
+      <Main>{children}</Main>
       <Footer />
-    </>
+    </Wrapper>
   )
 }
 

@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import logo from "../images/logo.png"
-import circle from "../images/circle.png"
+import { Circle } from "./circle"
 
 const StyledHeader = styled.header`
   border-bottom: 1px solid #ccc;
@@ -78,7 +78,7 @@ export const Header = () => (
       <Link to="/">
         <Nav>
           <Icon src={logo} alt="logo" />
-          <Icon src={circle} alt="circle" />
+          <Circle time={15} />
         </Nav>
       </Link>
 
