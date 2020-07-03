@@ -27,13 +27,10 @@ const Nav = styled.div`
 const Icon = styled.img`
   height: 44px;
   width: 44px;
-  margin: 0;
   margin-right: 8px;
 `
 
 const StyledLink = styled(Link)`
-  text-decoration: none;
-  cursor: pointer;
   font-weight: 600;
   line-height: 60px;
   font-size: 16px;
@@ -61,15 +58,19 @@ const Line = styled.div`
   margin: 0 24px;
 `
 
-const Button = styled.button`
+const Button = styled.a`
   height: 40px;
   background: #000;
-  border: none;
   color: #fff;
   border-radius: 4px;
   padding: 0 16px;
   font-weight: 600;
-  cursor: pointer;
+  line-height: 40px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.025);
+  }
 `
 
 export const Header = () => (
@@ -90,7 +91,7 @@ export const Header = () => (
           <span>Support our mission</span>
         </StyledLink>
         <Line />
-        <Button to="/">Download Free App</Button>
+        <Button>Download Free App</Button>
       </Nav>
     </NavWrapper>
   </StyledHeader>
