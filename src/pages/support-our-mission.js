@@ -24,6 +24,31 @@ const FlexContainer = styled.div`
   margin-bottom: ${props => (props.bottom ? props.bottom : "16px")};
 `
 
+const Line = styled.div`
+  height: 1px;
+  background: #ccc;
+  margin: 32px 0;
+`
+
+const Button = styled.a`
+  height: 40px;
+  background: #000;
+  color: #fff;
+  border-radius: 4px;
+  padding: 0 16px;
+  font-weight: 600;
+  line-height: 40px;
+  display: inline-block;
+  margin-top: 16px;
+  margin-right: 24px;
+  width: 168px;
+  text-align: center;
+
+  &:last-of-type {
+    margin-right: 8px;
+  }
+`
+
 const SupportOurMissionPage = () => (
   <Layout>
     <SEO title="Support Our Mission" />
@@ -50,7 +75,67 @@ const SupportOurMissionPage = () => (
       month or $50 per year. This is a difficult time – anything you can
       contribute helps.{" "}
     </Text>
-    <Link to="/">Go back to the homepage</Link>
+    <Line />
+    <h3>Annual Contribution</h3>
+    <Button>$50/year</Button>
+    <Button>$100/year</Button>
+    <Button>$200/year</Button>
+    <Button>$500/year</Button>
+    <Line />
+    <h3>Monthly Contribution</h3>
+    <Button>$5/month</Button>
+    <Button>$10/month</Button>
+    <Button>$20/month</Button>
+    <Button>$50/month</Button>
+    <p>
+      If you have any questions, please email us at member@sensive.xyz Want to
+      contribute without becoming a member? Make a one-time donation.
+    </p>
+    <h2>Membership Perks</h2>
+    <ul>
+      <li>
+        Future members-only experiences and perks, including video chats with
+        our co-founders, mental coaches, cognitive theraphist and thought
+        leaders.
+      </li>
+      <li>A $100 credit toward future app subscriptions*</li>
+      <li>Early access to new sensive tracking tools</li>
+      <li>Recognition in the sensive app and our utmost gratitude</li>
+    </ul>
+    <p>And much more to come...</p>
+    <h2>FAQ</h2>
+    <h4>Can I donate to support Sensive without becoming a member?</h4>
+    <p>
+      Yes! We welcome donations of any size. You can submit a one-time donation
+      online.
+    </p>
+    <h4>How do I cancel my membership?</h4>
+    <p>
+      At the moment, please email us at members@sensive.xyz to cancel your
+      membership. Unfortunately we can offer neither full nor prorated refunds
+      once you have been charged.
+    </p>
+    <h4>
+      How do I change the billing information associated with my membership?
+    </h4>
+    <p>
+      Memberships automatically renew monthly or annually. If you need to update
+      your billing information, or your membership is up for renewal soon,
+      please email us at members@sensive.xzy.
+    </p>
+    <h4>Is Sensive still accessible to non-members?</h4>
+    <p>Yes! Our iOS App and content will remain accessible to everyone.</p>
+    <h4>How do I redeem my $100 app credit?</h4>
+    <p>
+      In your account settings there is a credit counter indicating how to use
+      the credits in app.
+    </p>
+    <h4>I have another question.</h4>
+    <p>
+      No problem, just email us at members@sensive.xyz. We’d love to hear from
+      you.{" "}
+    </p>
+    <Line />
   </Layout>
 )
 
