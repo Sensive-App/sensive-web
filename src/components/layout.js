@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 const Main = styled.div`
   flex: 1;
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1280px;
   padding: 48px 0;
 `
 

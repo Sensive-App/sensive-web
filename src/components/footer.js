@@ -18,6 +18,8 @@ const Text = styled.p`
   color: #b6b6b6;
   margin-bottom: 80px;
   margin-top: 24px;
+  font-size: 12px;
+  letter-sapceing: -4%;
 `
 
 const Icon = styled.img`

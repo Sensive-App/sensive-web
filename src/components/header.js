@@ -12,7 +12,7 @@ const StyledHeader = styled.header`
 
 const NavWrapper = styled.div`
   width: 100%;
-  max-width: 1150px;
+  max-width: 1280px;
   display: flex;
   justify-content: space-between;
   padding: 0 24px;
@@ -66,10 +66,11 @@ const Button = styled.a`
   padding: 0 16px;
   font-weight: 600;
   line-height: 40px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 
   &:hover {
-    transform: scale(1.025);
+    transform: scale(1.05);
+    background: #222;
   }
 `
 
