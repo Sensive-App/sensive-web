@@ -19,7 +19,7 @@ const Text = styled.p`
   margin-bottom: 80px;
   margin-top: 24px;
   font-size: 12px;
-  letter-sapceing: -4%;
+  letter-spacing: -0.4px;
 `
 
 const Icon = styled.img`

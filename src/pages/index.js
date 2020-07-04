@@ -27,7 +27,13 @@ const FlexContainer = styled.div`
   display: flex;
   flex-direction: ${props => (props.rows ? "row" : "column")};
   align-items: ${props => (props.center ? "center" : "flex-start")};
+  justify-content: ${props => (props.justifyCenter ? "center" : "flex-start")};
   margin-bottom: ${props => (props.bottom ? props.bottom : "16px")};
+`
+
+const Callout = styled(FlexContainer)`
+  width: 840px;
+  max-width: 100%;
 `
 
 const Col = styled.div`
@@ -59,7 +65,7 @@ const IndexPage = () => (
     </FlexContainer>
 
     <FlexContainer rows center bottom="100px">
-      <FlexContainer>
+      <FlexContainer justifyCenter>
         <h2>Built around you.</h2>
         <Text>
           Sensive is built around you. By having a daily check-in with yourself
@@ -104,14 +110,14 @@ const IndexPage = () => (
     </FlexContainer>
 
     <FlexContainer center>
-      <FlexContainer rows>
+      <Callout rows center>
         <Circle size={80} />
         <Text>
           Sensive is built around you. By having a daily check-in with yourself.
           This daily routine is a quiet breif moment each day when you touch
           base with your emotions and state of mind.
         </Text>
-      </FlexContainer>
+      </Callout>
 
       <img src={circles} alt="Circles" width={480} />
       <img src={suckedin} alt="Sucked In" width={300} />

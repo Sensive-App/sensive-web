@@ -58,7 +58,7 @@ const Line = styled.div`
   margin: 0 24px;
 `
 
-const Button = styled.a`
+const Button = styled(Link)`
   height: 40px;
   background: #000;
   color: #fff;
@@ -92,7 +92,7 @@ export const Header = () => (
           <span>Support our mission</span>
         </StyledLink>
         <Line />
-        <Button>Download Free App</Button>
+        <Button to="/beta">Download Free App</Button>
       </Nav>
     </NavWrapper>
   </StyledHeader>

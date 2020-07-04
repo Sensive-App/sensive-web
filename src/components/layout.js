@@ -22,18 +22,16 @@ const Main = styled.div`
   flex: 1;
   margin: 0 auto;
   max-width: 1280px;
-  padding: 48px 0;
+  padding: 48px 24px;
 `
 
-const Layout = ({ children }) => {
-  return (
-    <Wrapper>
-      <Header />
-      <Main>{children}</Main>
-      <Footer />
-    </Wrapper>
-  )
-}
+const Layout = ({ children }) => (
+  <Wrapper>
+    <Header />
+    <Main>{children}</Main>
+    <Footer />
+  </Wrapper>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
