@@ -7,10 +7,11 @@ import mindful from "../images/mindful.png"
 const Wrapper = styled.div`
   width: 840px;
   text-align: center;
+  min-height: 65vh;
 `
 
 const Img = styled.img`
-  width: 320px;
+  width: 500px;
   display: block;
   margin: 16px auto;
 `

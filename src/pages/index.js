@@ -15,12 +15,31 @@ const Text = styled.p`
   line-height: 32px;
 `
 
+const CirclesImage = styled.img`
+  margin-bottom: 80px;
+  width: 480px;
+`
+
+const TextQuote = styled.p`
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  margin-left: 24px;
+`
+
 const RedLink = styled.a`
   font-weight: 600;
   font-size: 19px;
   line-height: 28px;
   color: #ff132e;
   margin-top: 24px;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+
+  &:hover {
+    border-bottom: 2px solid #ff132e;
+  }
 `
 
 const FlexContainer = styled.div`
@@ -34,6 +53,8 @@ const FlexContainer = styled.div`
 const Callout = styled(FlexContainer)`
   width: 840px;
   max-width: 100%;
+  margin-top: 160px;
+  margin-bottom: 200px;
 `
 
 const Col = styled.div`
@@ -80,9 +101,8 @@ const IndexPage = () => (
       <Col>
         <h3>POMS & TMDS</h3>
         <p>
-          Using a pshycological technique called profile of mood states or POMS.
-          With that we establish a daily score, total mood disturbance score or
-          TMDS. This allows us to accuretly and precisley monitor your mood
+          Using a pshycological technique called <i>profile of mood states</i> or <strong>POMS</strong>.
+          With that we establish a daily score, <i>total mood disturbance score</i> or <strong>TMDS</strong>. This allows us to accuretly and precisley monitor your mood
           through self-reporting.{" "}
         </p>
         <RedLink>Learn More</RedLink>
@@ -92,7 +112,7 @@ const IndexPage = () => (
         <p>
           Through the use of daily journaling we help you establish a deeper
           check with yourself. A place for contemplating but yet breif top of
-          mind free flowing text. This in combination with your TMDS becomes the
+          mind free flowing text. This in combination with your <strong>TMDS</strong> becomes the
           baseline for your daily routine.
         </p>
         <RedLink>Learn More</RedLink>
@@ -111,15 +131,15 @@ const IndexPage = () => (
 
     <FlexContainer center>
       <Callout rows center>
-        <Circle size={80} />
-        <Text>
+        <Circle size={100} />
+        <TextQuote>
           Sensive is built around you. By having a daily check-in with yourself.
           This daily routine is a quiet breif moment each day when you touch
           base with your emotions and state of mind.
-        </Text>
+        </TextQuote>
       </Callout>
 
-      <img src={circles} alt="Circles" width={480} />
+      <CirclesImage src={circles} alt="Circles" />
       <img src={suckedin} alt="Sucked In" width={300} />
     </FlexContainer>
   </Layout>
