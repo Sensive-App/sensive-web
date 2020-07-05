@@ -7,12 +7,30 @@ import appstore from "../images/appstore-btn.png"
 import ok from "../images/ok.png"
 import suckedin from "../images/sucked-in.png"
 import circles from "../images/circles.png"
+import phoneFrame from "../images/iphone-x-frame-1.png"
 import { Circle } from "../components/circle"
 
 const Text = styled.p`
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
+`
+
+const IngressText = styled.p`
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  width: 700px;
+  margin-bottom: 40px;
+`
+
+const PhoneFrame = styled.div`
+  background-image: URL(${phoneFrame});
+  min-width: 500px;
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top:40px;
 `
 
 const CirclesImage = styled.img`
@@ -48,6 +66,8 @@ const FlexContainer = styled.div`
   align-items: ${props => (props.center ? "center" : "flex-start")};
   justify-content: ${props => (props.justifyCenter ? "center" : "flex-start")};
   margin-bottom: ${props => (props.bottom ? props.bottom : "16px")};
+  margin-top: ${props => (props.top ? props.top : "0px")};
+  margin-left: ${props => (props.left ? props.left : "0px")};
 `
 
 const Callout = styled(FlexContainer)`
@@ -69,16 +89,16 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <FlexContainer rows center bottom="100px">
-      <img src={suckedin} alt="something" width={400} />
-      <FlexContainer>
+    <FlexContainer rows center bottom="0px">
+      <PhoneFrame></PhoneFrame>
+      <FlexContainer top="-72px" left="-40px">
         <h1>Mental Health</h1>
-        <Text>
+        <IngressText>
           To better understand your mental health, you need to ask yourself
           questions, often and on routine. We help you do that. Sensive uses
           psychological backed profiling techniques to help you gain insights to
           your mood over time and how to improve it.
-        </Text>
+        </IngressText>
         <a href="#">
           <img src={appstore} alt="Download on the App Store" height={50} />
         </a>

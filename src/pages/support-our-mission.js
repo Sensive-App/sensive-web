@@ -96,6 +96,17 @@ const Button = styled.a`
     color: #000000;
   }
 `
+const RedLink = styled.a`
+  font-weight: 600;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+
+  &:hover {
+    border-bottom: 2px solid #ff132e;
+    color: #ff132e;
+  }
+`
 
 const SupportOurMissionPage = () => (
   <Layout>
@@ -122,8 +133,7 @@ const SupportOurMissionPage = () => (
       <h2>Become a Member </h2>
       <Text>
         Support Sensive and its development with a contribution of at least $5
-        per month or $50 per year. This is a difficult time – anything you can
-        contribute helps.{" "}
+        per month or $500 per year. We want to stay independant and your contribution helps us do that. 
       </Text>
       <Line />
       <h3>Annual Contribution</h3>
@@ -139,9 +149,9 @@ const SupportOurMissionPage = () => (
       <Button>$50/month</Button>
       <TextIngress>
         If you have any questions, please email us at{" "}
-        <a href="mailto:member@sensive.xyz">member@sensive.xyz</a> Want to
+        <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink> Want to
         contribute without becoming a member?{" "}
-        <a href="#">Make a one-time donation</a>.
+        <RedLink href="#">Make a one-time donation</RedLink>.
       </TextIngress>
       <List>
         <h2>Membership Perks</h2>
@@ -169,7 +179,7 @@ const SupportOurMissionPage = () => (
       </TextResponse>
       <h4>How do I cancel my membership?</h4>
       <TextResponse>
-        At the moment, please email us at members@sensive.xyz to cancel your
+        At the moment, please email us at <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink> to cancel your
         membership. Unfortunately we can offer neither full nor prorated refunds
         once you have been charged.
       </TextResponse>
@@ -192,7 +202,7 @@ const SupportOurMissionPage = () => (
       </TextResponse>
       <h4>I have another question.</h4>
       <TextResponse>
-        No problem, just email us at members@sensive.xyz. We’d love to hear from
+        No problem, just email us at <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>. We’d love to hear from
         you.
       </TextResponse>
       <Line />
