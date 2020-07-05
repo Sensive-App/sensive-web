@@ -42,7 +42,7 @@ const BetaPage = () => (
         Sensive is built around you. By having a daily check-in with yourself
         you’ll slowly learn more about yourself and discover ways to improve
         your mood and mental state of mind. We are still in private beta.{" "}
-        <RedLink href="">Request Access</RedLink>
+        <RedLink href="https://sensive.typeform.com/to/faROWzIv" target="_new">Request Access</RedLink>
       </Text>
     </Wrapper>
   </Layout>
