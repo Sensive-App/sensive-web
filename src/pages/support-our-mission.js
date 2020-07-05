@@ -103,8 +103,8 @@ const RedLink = styled.a`
   padding-bottom: 2px;
 
   &:hover {
-    border-bottom: 2px solid #ff132e;
-    color: #ff132e;
+    border-bottom: 2px solid transparent;
+    background-color: PaleGreen;
   }
 `
 
