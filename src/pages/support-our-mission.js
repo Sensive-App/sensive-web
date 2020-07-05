@@ -33,6 +33,7 @@ const Line = styled.div`
 
 const Wrapper = styled.div`
   width: 770px;
+  max-width: 100%;
 `
 const List = styled.div`
   margin-top: 80px;
@@ -83,6 +84,11 @@ const Button = styled.a`
   margin-right: 16px;
   width: 164px;
   text-align: center;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    margin-right: 0px;
+  }
 
   &:last-of-type {
     margin-right: 0px;

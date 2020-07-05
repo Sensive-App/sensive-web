@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Sensive, Track your mood daily using our App.`,
+    description: `A simple app that helps you get data on your mood using a daily routine to ask you important questions. Improves over time with deeper insights and suggestions on how to imrove your mood and mental health.`,
+    author: `Sensive.xyz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,7 +17,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "UA-XXXXXXXXX-X",
+        trackingId: "UA-168251433-1",
       },
     },
     `gatsby-transformer-sharp`,

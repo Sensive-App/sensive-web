@@ -6,6 +6,7 @@ import mindful from "../images/mindful.png"
 
 const Wrapper = styled.div`
   width: 840px;
+  max-width: 100%;
   text-align: center;
   min-height: 65vh;
 `
