@@ -35,13 +35,13 @@ export const Footer = () => (
     <Circle />
     <Text>When you are looking for something, you'll find nothing.</Text>
     <SoMe>
-      <a href="https://www.instagram.com/sensive.xyz/">
+      <a href="https://www.instagram.com/sensive.xyz/" target="_new">
         <Icon src={instagram} alt="instagram" />
       </a>
-      <a href="https://www.instagram.com/sensive.xyz/">
+      <a href="https://www.twitter.com/SensiveXyz/" target="_new">
         <Icon src={twitter} alt="twitter" />
       </a>
-      <a href="https://www.instagram.com/sensive.xyz/">
+      <a href="https://www.linkedin.com/company/sensive-mood-tracking" target="_new">
         <Icon src={linkedin} alt="linkedin" />
       </a>
     </SoMe>
