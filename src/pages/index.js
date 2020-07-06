@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -139,9 +140,9 @@ const IndexPage = () => (
           psychological backed profiling techniques to help you gain insights to
           your mood over time and how to improve it.
         </IngressText>
-        <a href="https://sensive-mood.typeform.com/to/faROWzIv" targe="_new">
+        <Link to="/beta">
           <img src={appstore} alt="Download on the App Store" height={50} />
-        </a>
+        </Link>
       </Hero>
     </FlexContainer>
 
