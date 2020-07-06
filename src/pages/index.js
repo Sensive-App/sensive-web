@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,7 +17,7 @@ const Text = styled.p`
   @media (max-width: 480px) {
     font-size: 22px;
     line-height: 28px;
- }
+  }
 `
 
 const IngressText = styled.p`
@@ -33,8 +32,7 @@ const IngressText = styled.p`
     width: 100%;
     font-size: 22px;
     line-height: 28px;
- }
-
+  }
 `
 
 const PhoneFrame = styled.div`
@@ -43,11 +41,11 @@ const PhoneFrame = styled.div`
   min-height: 800px;
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-top:40px;
+  margin-top: 40px;
 
   @media (max-width: 480px) {
     display: none;
- }
+  }
 `
 
 const CirclesImage = styled.img`
@@ -64,7 +62,7 @@ const TextQuote = styled.p`
   @media (max-width: 480px) {
     margin-left: 0px;
     margin-top: 40px;
- }
+  }
 `
 
 const RedLink = styled.a`
@@ -94,7 +92,6 @@ const FlexContainer = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
   }
-
 `
 
 const Callout = styled(FlexContainer)`
@@ -164,9 +161,11 @@ const IndexPage = () => (
       <Col>
         <h3>POMS & TMDS</h3>
         <p>
-          Using a pshycological technique called <i>profile of mood states</i> or <strong>POMS</strong>.
-          With that we establish a daily score, <i>total mood disturbance score</i> or <strong>TMDS</strong>. This allows us to accuretly and precisley monitor your mood
-          through self-reporting.{" "}
+          Using a pshycological technique called <i>profile of mood states</i>{" "}
+          or <strong>POMS</strong>. With that we establish a daily score,{" "}
+          <i>total mood disturbance score</i> or <strong>TMDS</strong>. This
+          allows us to accuretly and precisley monitor your mood through
+          self-reporting.{" "}
         </p>
         <RedLink>Learn More</RedLink>
       </Col>
@@ -175,8 +174,8 @@ const IndexPage = () => (
         <p>
           Through the use of daily journaling we help you establish a deeper
           check with yourself. A place for contemplating but yet breif top of
-          mind free flowing text. This in combination with your <strong>TMDS</strong> becomes the
-          baseline for your daily routine.
+          mind free flowing text. This in combination with your{" "}
+          <strong>TMDS</strong> becomes the baseline for your daily routine.
         </p>
         <RedLink>Learn More</RedLink>
       </Col>

@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -139,7 +138,8 @@ const SupportOurMissionPage = () => (
       <h2>Become a Member </h2>
       <Text>
         Support Sensive and its development with a contribution of at least $5
-        per month or $500 per year. We want to stay independant and your contribution helps us do that. 
+        per month or $500 per year. We want to stay independant and your
+        contribution helps us do that.
       </Text>
       <Line />
       <h3>Annual Contribution</h3>
@@ -155,8 +155,8 @@ const SupportOurMissionPage = () => (
       <Button>$50/month</Button>
       <TextIngress>
         If you have any questions, please email us at{" "}
-        <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink> Want to
-        contribute without becoming a member?{" "}
+        <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>{" "}
+        Want to contribute without becoming a member?{" "}
         <RedLink href="#">Make a one-time donation</RedLink>.
       </TextIngress>
       <List>
@@ -185,9 +185,10 @@ const SupportOurMissionPage = () => (
       </TextResponse>
       <h4>How do I cancel my membership?</h4>
       <TextResponse>
-        At the moment, please email us at <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink> to cancel your
-        membership. Unfortunately we can offer neither full nor prorated refunds
-        once you have been charged.
+        At the moment, please email us at{" "}
+        <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>{" "}
+        to cancel your membership. Unfortunately we can offer neither full nor
+        prorated refunds once you have been charged.
       </TextResponse>
       <h4>
         How do I change the billing information associated with my membership?
@@ -208,8 +209,9 @@ const SupportOurMissionPage = () => (
       </TextResponse>
       <h4>I have another question.</h4>
       <TextResponse>
-        No problem, just email us at <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>. We’d love to hear from
-        you.
+        No problem, just email us at{" "}
+        <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>.
+        We’d love to hear from you.
       </TextResponse>
       <Line />
       <ItalicText>
