@@ -168,7 +168,7 @@ const IndexPage = () => (
           allows us to accuretly and precisley monitor your mood through
           self-reporting.{" "}
         </p>
-        <RedLink>Learn More</RedLink>
+        {/* <RedLink>Learn More</RedLink> */}
       </Col>
       <Col>
         <h3>Daily Journaling</h3>
@@ -178,7 +178,7 @@ const IndexPage = () => (
           mind free flowing text. This in combination with your{" "}
           <strong>TMDS</strong> becomes the baseline for your daily routine.
         </p>
-        <RedLink>Learn More</RedLink>
+        {/* <RedLink>Learn More</RedLink> */}
       </Col>
       <Col>
         <h3>Atomic Habits</h3>
@@ -188,7 +188,7 @@ const IndexPage = () => (
           suggest you start with simple easy to complete habits and build up to
           more complex habits.
         </p>
-        <RedLink>Learn More</RedLink>
+        {/* <RedLink>Learn More</RedLink> */}
       </Col>
     </FlexContainer>
 

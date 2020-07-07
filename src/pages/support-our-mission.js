@@ -196,7 +196,7 @@ const SupportOurMissionPage = () => (
       <TextResponse>
         Memberships automatically renew monthly or annually. If you need to
         update your billing information, or your membership is up for renewal
-        soon, please email us at members@sensive.xzy.
+        soon, please email us at <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>.
       </TextResponse>
       <h4>Is Sensive still accessible to non-members?</h4>
       <TextResponse>
