@@ -11,8 +11,8 @@ const StyledHeader = styled.header`
 `
 
 const NavWrapper = styled.div`
-  width: 100%;
-  max-width: 1280px;
+  width: 1280px;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 24px;
@@ -96,4 +96,5 @@ export const Header = () => (
       </Nav>
     </NavWrapper>
   </StyledHeader>
+
 )
