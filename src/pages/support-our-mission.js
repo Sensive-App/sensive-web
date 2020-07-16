@@ -101,6 +101,7 @@ const Button = styled.button`
     transform: scale(1.05);
     background: PaleGreen;
     color: #000000;
+    cursor: pointer; 
   }
 `
 
