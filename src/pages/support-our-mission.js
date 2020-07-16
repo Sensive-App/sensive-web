@@ -122,15 +122,15 @@ const stripePromise = loadStripe(
 const SupportOurMissionPage = () => {
   const contribute = async buttonIndex => {
     const prices = [
-      "price_1H44DsKjudcPUrxStLjirleb", // 50/year
-      "price_1H44DsKjudcPUrxSxpln5tNf", // 100/year
-      "price_1H44DsKjudcPUrxSY0st01jy", // 200/year
-      "price_1H44DsKjudcPUrxS9aXhsbmX", // 500/year
+      "price_1H5W9KKjudcPUrxSj6zfuyNz", // 50/year
+      "price_1H5W9KKjudcPUrxS5Kmd8XaN", // 100/year
+      "price_1H5W9KKjudcPUrxSzCNhUtlX", // 200/year
+      "price_1H5W9KKjudcPUrxSwHTLRBzv", // 500/year
 
-      "price_1H44DsKjudcPUrxSEDE0Ug7K", // 5/month
-      "price_1H44DsKjudcPUrxSFNBGpNie", // 10/month
-      "price_1H44DtKjudcPUrxSdFX9YkDa", // 20/month
-      "price_1H44DsKjudcPUrxS18Ob7RG9", // 50/month
+      "price_1H5W9KKjudcPUrxSNvAW68TR", // 5/month
+      "price_1H5W9KKjudcPUrxSiS3xoFSw", // 10/month
+      "price_1H5W9KKjudcPUrxS0yVid6lG", // 20/month
+      "price_1H5W9KKjudcPUrxSjGVqiHXi", // 50/month
     ]
 
     // When the customer clicks on the button, redirect them to Checkout.
