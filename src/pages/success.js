@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import mindful from "../images/mindful.png"
+import signatures from "../images/signatures.png"
 
 const Wrapper = styled.div`
   width: 840px;
@@ -15,6 +16,11 @@ const Img = styled.img`
   width: 500px;
   display: block;
   margin: 16px auto;
+`
+const Signatures = styled.img`
+  width: 312px;
+  display: block;
+  margin: 32px auto;
 `
 
 const Text = styled.p`
@@ -38,7 +44,14 @@ const SuccessPage = () => (
     <SEO title="Successful payment" />
     <Wrapper>
       <Img src={mindful} alt="Mindful" />
-      <h1>Thank you!</h1>
+      <h1>Thank you</h1>
+      <Text>
+        Thank you so much for supporting us in our efforts to stay independent.
+        <br />
+        We really value your contribution, and we will be in touch shortly with
+        more information on what to expect next. Sincerely.
+      </Text>
+      <Signatures src={signatures} alt="signatures" />
     </Wrapper>
   </Layout>
 )

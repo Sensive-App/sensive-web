@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useEffect, useState } from "react"
+import React, { useLayoutEffect, useState } from "react"
 import styled from "styled-components"
 import { motion, useCycle } from "framer-motion"
 
@@ -131,7 +131,7 @@ export const Header = () => {
   const [isMobile, setIsMobile] = useState(false)
   const [isOpen, toggleOpen] = useCycle(false, true)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (window.innerWidth < 768) setIsMobile(true)
   }, [])
 
