@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Select } from "../components/dropdown"
 import workhard from "../images/work-hard.png"
 import { loadStripe } from "@stripe/stripe-js"
 
@@ -101,7 +102,7 @@ const Button = styled.button`
     transform: scale(1.05);
     background: PaleGreen;
     color: #000000;
-    cursor: pointer; 
+    cursor: pointer;
   }
 `
 
@@ -121,17 +122,27 @@ const stripePromise = loadStripe(
 )
 
 const SupportOurMissionPage = () => {
-  const contribute = async buttonIndex => {
-    const prices = [
-      "price_1H5W9KKjudcPUrxSj6zfuyNz", // 50/year
-      "price_1H5W9KKjudcPUrxS5Kmd8XaN", // 100/year
-      "price_1H5W9KKjudcPUrxSzCNhUtlX", // 200/year
-      "price_1H5W9KKjudcPUrxSwHTLRBzv", // 500/year
+  const contribute = async index => {
+    if (index === "") return
 
-      "price_1H5W9KKjudcPUrxSNvAW68TR", // 5/month
-      "price_1H5W9KKjudcPUrxSiS3xoFSw", // 10/month
-      "price_1H5W9KKjudcPUrxS0yVid6lG", // 20/month
-      "price_1H5W9KKjudcPUrxSjGVqiHXi", // 50/month
+    const prices = [
+      { price: "price_1H5W9KKjudcPUrxSj6zfuyNz", mode: "subscription" }, // 50/year
+      { price: "price_1H5W9KKjudcPUrxS5Kmd8XaN", mode: "subscription" }, // 100/year
+      { price: "price_1H5W9KKjudcPUrxSzCNhUtlX", mode: "subscription" }, // 200/year
+      { price: "price_1H5W9KKjudcPUrxSwHTLRBzv", mode: "subscription" }, // 500/year
+
+      { price: "price_1H5W9KKjudcPUrxSNvAW68TR", mode: "subscription" }, // 5/month
+      { price: "price_1H5W9KKjudcPUrxSiS3xoFSw", mode: "subscription" }, // 10/month
+      { price: "price_1H5W9KKjudcPUrxS0yVid6lG", mode: "subscription" }, // 20/month
+      { price: "price_1H5W9KKjudcPUrxSjGVqiHXi", mode: "subscription" }, // 50/month
+
+      { price: "price_1H5YjvKjudcPUrxSOsMZYu4V", mode: "payment" }, // 5 once
+      { price: "price_1H5YjvKjudcPUrxSd0j19ey9", mode: "payment" }, // 10 once
+      { price: "price_1H5YjvKjudcPUrxScOLWxAMS", mode: "payment" }, // 25 once
+      { price: "price_1H5YjvKjudcPUrxSK8M8iX7Q", mode: "payment" }, // 50 once
+      { price: "price_1H5YjvKjudcPUrxSZfLUVXOg", mode: "payment" }, // 100 once
+      { price: "price_1H5YjvKjudcPUrxSMWGOIpqM", mode: "payment" }, // 200 once
+      { price: "price_1H5YjvKjudcPUrxSvoTlrWm3", mode: "payment" }, // 500 once
     ]
 
     // When the customer clicks on the button, redirect them to Checkout.
@@ -139,9 +150,9 @@ const SupportOurMissionPage = () => {
     const { error } = await stripe.redirectToCheckout({
       lineItems: [
         // Replace with the ID of your price
-        { price: prices[buttonIndex], quantity: 1 },
+        { price: prices[+index].price, quantity: 1 },
       ],
-      mode: "subscription",
+      mode: prices[+index].mode,
       successUrl: "https://sensive.xyz/success",
       cancelUrl: "https://sensive.xyz/support-our-mission",
     })
@@ -196,8 +207,17 @@ const SupportOurMissionPage = () => {
         <TextIngress>
           If you have any questions, please email us at{" "}
           <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>{" "}
-          {/* Want to contribute without becoming a member?{" "}
-           <RedLink href="#">Make a one-time donation</RedLink>. */}
+          Want to contribute without becoming a member?{" "}
+          <Select onChange={event => contribute(event.target.value)}>
+            <option value="">Make a one-time donation</option>
+            <option value="8">$5</option>
+            <option value="9">$10</option>
+            <option value="10">$25</option>
+            <option value="11">$50</option>
+            <option value="12">$100</option>
+            <option value="13">$200</option>
+            <option value="14">$500</option>
+          </Select>
         </TextIngress>
         <List>
           <h2>Membership Perks</h2>
