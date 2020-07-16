@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import workhard from "../images/work-hard.png"
+import { loadStripe } from "@stripe/stripe-js"
 
 const Text = styled.p`
   font-weight: 600;
@@ -70,10 +71,11 @@ const ListLi = styled.li`
   font-size: 19px;
 `
 
-const Button = styled.a`
+const Button = styled.button`
   height: 50px;
   background: #000;
   color: #fff;
+  border: none;
   border-radius: 4px;
   padding: 0 16px;
   font-weight: 600;
@@ -101,6 +103,7 @@ const Button = styled.a`
     color: #000000;
   }
 `
+
 const RedLink = styled.a`
   font-weight: 600;
   color: #000;
@@ -112,125 +115,164 @@ const RedLink = styled.a`
     background-color: PaleGreen;
   }
 `
-
-const SupportOurMissionPage = () => (
-  <Layout>
-    <Wrapper>
-      <SEO title="Support Our Mission" />
-      <Img src={workhard} alt="Work Hard" />
-      <h1>Support Our Mission</h1>
-      <Text40>
-        Sensives mission has always been to inspire thoughtfulness and curiosity
-        about the incredible minds we all share. In these uncertain times, it’s
-        more important than ever that we have a place to keep that sense of awe
-        alive. Our new membership program aims to help strentgthen our ability
-        to stay independant and continue to develop our app and unite our
-        community so that Sensive can continue to thrive.
-        <br />
-        <br />
-        By becoming a founding member, you’re joining a community of like-minded
-        mind lovers who believe deeply in Sensives mission. Your direct support
-        allows our small team to help improve mental heath, develop and build
-        great software, and continue building out our knowledge about
-        pshycological health. Oh, and you’ll get some pretty great perks, too.
-      </Text40>
-
-      <h2>Become a Member </h2>
-      <Text>
-        Support Sensive and its development with a contribution of at least $5
-        per month or $500 per year. We want to stay independant and your
-        contribution helps us do that.
-      </Text>
-      <Line />
-      <h3>Annual Contribution</h3>
-      <Button>$50/year</Button>
-      <Button>$100/year</Button>
-      <Button>$200/year</Button>
-      <Button>$500/year</Button>
-      <Line />
-      <h3>Monthly Contribution</h3>
-      <Button>$5/month</Button>
-      <Button>$10/month</Button>
-      <Button>$20/month</Button>
-      <Button>$50/month</Button>
-      <TextIngress>
-        If you have any questions, please email us at{" "}
-        <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>{" "}
-        Want to contribute without becoming a member?{" "}
-        <RedLink href="#">Make a one-time donation</RedLink>.
-      </TextIngress>
-      <List>
-        <h2>Membership Perks</h2>
-        <ul>
-          <ListLi>
-            <strong>Future members-only experiences and perks</strong>,
-            including video chats with our co-founders, mental coaches,
-            cognitive theraphist and thought leaders.
-          </ListLi>
-          <ListLi>
-            A <strong>$100 credit</strong> toward future app subscriptions*
-          </ListLi>
-          <ListLi>Early access to new sensive tracking tools</ListLi>
-          <ListLi>
-            Recognition in the sensive app and our utmost gratitude
-          </ListLi>
-        </ul>
-        <TextResponse>And much more to come...</TextResponse>
-      </List>
-      <h2>FAQ</h2>
-      <h4>Can I donate to support Sensive without becoming a member?</h4>
-      <TextResponse>
-        Yes! We welcome donations of any size. You can submit a one-time
-        donation online.
-      </TextResponse>
-      <h4>How do I cancel my membership?</h4>
-      <TextResponse>
-        At the moment, please email us at{" "}
-        <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>{" "}
-        to cancel your membership. Unfortunately we can offer neither full nor
-        prorated refunds once you have been charged.
-      </TextResponse>
-      <h4>
-        How do I change the billing information associated with my membership?
-      </h4>
-      <TextResponse>
-        Memberships automatically renew monthly or annually. If you need to
-        update your billing information, or your membership is up for renewal
-        soon, please email us at <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>.
-      </TextResponse>
-      <h4>Is Sensive still accessible to non-members?</h4>
-      <TextResponse>
-        Yes! Our iOS App and content will remain accessible to everyone.
-      </TextResponse>
-      <h4>How do I redeem my $100 app credit?</h4>
-      <TextResponse>
-        In your account settings there is a credit counter indicating how to use
-        the credits in app.
-      </TextResponse>
-      <h4>I have another question.</h4>
-      <TextResponse>
-        No problem, just email us at{" "}
-        <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>.
-        We’d love to hear from you.
-      </TextResponse>
-      <Line />
-      <ItalicText>
-        Your support of Sensive does not constitute a charitable donation, and
-        your contribution is not eligible for a tax deduction. Our membership
-        program is designed to connect our community and sustain Sensives
-        mission to inspire a greater understanding in mental health.
-        <br />
-        <br />
-        Members will be subscribed to a members-only mailing list. This is to
-        let you know when member events are happening, how to access new
-        features before anyone else, and other announcements related to being a
-        member. You’ll also receive emails from our payment processor Stripe
-        regarding your payment, including invoices and renewal notices. Your
-        email address and personal information will never be given to anyone for
-        any purpose.
-      </ItalicText>
-    </Wrapper>
-  </Layout>
+const stripePromise = loadStripe(
+  "pk_test_51H1m7uKjudcPUrxSlPUKI8dlbmBNSYc3VE7VhP7P0XQwr3De5wjgiWSTRQw9VrCsS218j0SLewNc66wR8XiNmXMo00OFXIQWOC"
 )
+
+const SupportOurMissionPage = () => {
+  const contribute = async buttonIndex => {
+    const prices = [
+      "price_1H44DsKjudcPUrxStLjirleb", // 50/year
+      "price_1H44DsKjudcPUrxSxpln5tNf", // 100/year
+      "price_1H44DsKjudcPUrxSY0st01jy", // 200/year
+      "price_1H44DsKjudcPUrxS9aXhsbmX", // 500/year
+
+      "price_1H44DsKjudcPUrxSEDE0Ug7K", // 5/month
+      "price_1H44DsKjudcPUrxSFNBGpNie", // 10/month
+      "price_1H44DtKjudcPUrxSdFX9YkDa", // 20/month
+      "price_1H44DsKjudcPUrxS18Ob7RG9", // 50/month
+    ]
+
+    // When the customer clicks on the button, redirect them to Checkout.
+    const stripe = await stripePromise
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: [
+        // Replace with the ID of your price
+        { price: prices[buttonIndex], quantity: 1 },
+      ],
+      mode: "subscription",
+      successUrl: "https://sensive.xyz/success",
+      cancelUrl: "https://sensive.xyz/support-our-mission",
+    })
+    console.log("error:", error.message)
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `error.message`.
+  }
+
+  return (
+    <Layout>
+      <Wrapper>
+        <SEO title="Support Our Mission" />
+        <Img src={workhard} alt="Work Hard" />
+        <h1>Support Our Mission</h1>
+        <Text40>
+          Sensives mission has always been to inspire thoughtfulness and
+          curiosity about the incredible minds we all share. In these uncertain
+          times, it’s more important than ever that we have a place to keep that
+          sense of awe alive. Our new membership program aims to help
+          strentgthen our ability to stay independant and continue to develop
+          our app and unite our community so that Sensive can continue to
+          thrive.
+          <br />
+          <br />
+          By becoming a founding member, you’re joining a community of
+          like-minded mind lovers who believe deeply in Sensives mission. Your
+          direct support allows our small team to help improve mental heath,
+          develop and build great software, and continue building out our
+          knowledge about pshycological health. Oh, and you’ll get some pretty
+          great perks, too.
+        </Text40>
+
+        <h2>Become a Member </h2>
+        <Text>
+          Support Sensive and its development with a contribution of at least $5
+          per month or $500 per year. We want to stay independant and your
+          contribution helps us do that.
+        </Text>
+        <Line />
+        <h3>Annual Contribution</h3>
+        <Button onClick={() => contribute(0)}>$50/year</Button>
+        <Button onClick={() => contribute(1)}>$100/year</Button>
+        <Button onClick={() => contribute(2)}>$200/year</Button>
+        <Button onClick={() => contribute(3)}>$500/year</Button>
+        <Line />
+        <h3>Monthly Contribution</h3>
+        <Button onClick={() => contribute(4)}>$5/month</Button>
+        <Button onClick={() => contribute(5)}>$10/month</Button>
+        <Button onClick={() => contribute(6)}>$20/month</Button>
+        <Button onClick={() => contribute(7)}>$50/month</Button>
+        <TextIngress>
+          If you have any questions, please email us at{" "}
+          <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>{" "}
+          {/* Want to contribute without becoming a member?{" "}
+           <RedLink href="#">Make a one-time donation</RedLink>. */}
+        </TextIngress>
+        <List>
+          <h2>Membership Perks</h2>
+          <ul>
+            <ListLi>
+              <strong>Future members-only experiences and perks</strong>,
+              including video chats with our co-founders, mental coaches,
+              cognitive theraphist and thought leaders.
+            </ListLi>
+            <ListLi>
+              A <strong>$100 credit</strong> toward future app subscriptions*
+            </ListLi>
+            <ListLi>Early access to new sensive tracking tools</ListLi>
+            <ListLi>
+              Recognition in the sensive app and our utmost gratitude
+            </ListLi>
+          </ul>
+          <TextResponse>And much more to come...</TextResponse>
+        </List>
+        <h2>FAQ</h2>
+        <h4>Can I donate to support Sensive without becoming a member?</h4>
+        <TextResponse>
+          Yes! We welcome donations of any size. You can submit a one-time
+          donation online.
+        </TextResponse>
+        <h4>How do I cancel my membership?</h4>
+        <TextResponse>
+          At the moment, please email us at{" "}
+          <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>{" "}
+          to cancel your membership. Unfortunately we can offer neither full nor
+          prorated refunds once you have been charged.
+        </TextResponse>
+        <h4>
+          How do I change the billing information associated with my membership?
+        </h4>
+        <TextResponse>
+          Memberships automatically renew monthly or annually. If you need to
+          update your billing information, or your membership is up for renewal
+          soon, please email us at{" "}
+          <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>
+          .
+        </TextResponse>
+        <h4>Is Sensive still accessible to non-members?</h4>
+        <TextResponse>
+          Yes! Our iOS App and content will remain accessible to everyone.
+        </TextResponse>
+        <h4>How do I redeem my $100 app credit?</h4>
+        <TextResponse>
+          In your account settings there is a credit counter indicating how to
+          use the credits in app.
+        </TextResponse>
+        <h4>I have another question.</h4>
+        <TextResponse>
+          No problem, just email us at{" "}
+          <RedLink href="mailto:member@sensive.xyz">member@sensive.xyz</RedLink>
+          . We’d love to hear from you.
+        </TextResponse>
+        <Line />
+        <ItalicText>
+          Your support of Sensive does not constitute a charitable donation, and
+          your contribution is not eligible for a tax deduction. Our membership
+          program is designed to connect our community and sustain Sensives
+          mission to inspire a greater understanding in mental health.
+          <br />
+          <br />
+          Members will be subscribed to a members-only mailing list. This is to
+          let you know when member events are happening, how to access new
+          features before anyone else, and other announcements related to being
+          a member. You’ll also receive emails from our payment processor Stripe
+          regarding your payment, including invoices and renewal notices. Your
+          email address and personal information will never be given to anyone
+          for any purpose.
+        </ItalicText>
+      </Wrapper>
+    </Layout>
+  )
+}
 
 export default SupportOurMissionPage
