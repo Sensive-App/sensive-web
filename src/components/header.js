@@ -138,42 +138,51 @@ export const Header = () => {
   return (
     <StyledHeader>
       <NavWrapper>
-        <Link to="/">
-          <Nav>
-            <Icon src={logo} alt="logo" />
-            <Circle time={15} />
-          </Nav>
-        </Link>
-
         {isMobile ? (
-          <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
-            <Background variants={sidebar}>
-              <MobileMenuLink to="/" activeClassName="active">
-                Sensive
-              </MobileMenuLink>
-              <MobileMenuLink
-                to="/support-our-mission"
-                activeClassName="active"
-              >
-                Support our mission
-              </MobileMenuLink>
-              <MobileMenuLink to="/beta" activeClassName="active">
-                Download Free App
-              </MobileMenuLink>
-            </Background>
-            <MenuToggle toggle={() => toggleOpen()} />
-          </motion.nav>
+          <>
+            <Link to="/">
+              <Nav>
+                <Icon src={logo} alt="logo" />
+                <Circle time={15} />
+              </Nav>
+            </Link>
+            <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
+              <Background variants={sidebar}>
+                <MobileMenuLink to="/" activeClassName="active">
+                  Sensive
+                </MobileMenuLink>
+                <MobileMenuLink
+                  to="/support-our-mission"
+                  activeClassName="active"
+                >
+                  Support our mission
+                </MobileMenuLink>
+                <MobileMenuLink to="/beta" activeClassName="active">
+                  Download Free App
+                </MobileMenuLink>
+              </Background>
+              <MenuToggle toggle={() => toggleOpen()} />
+            </motion.nav>
+          </>
         ) : (
-          <Nav>
-            <StyledLink to="/" activeClassName="active">
-              <span>Sensive</span>
-            </StyledLink>
-            <StyledLink to="/support-our-mission" activeClassName="active">
-              <span>Support our mission</span>
-            </StyledLink>
-            <Line />
-            <Button to="/beta">Download Free App</Button>
-          </Nav>
+          <>
+            <Link to="/">
+              <Nav>
+                <Icon src={logo} alt="logo" />
+                <Circle time={15} />
+              </Nav>
+            </Link>
+            <Nav>
+              <StyledLink to="/" activeClassName="active">
+                <span>Sensive</span>
+              </StyledLink>
+              <StyledLink to="/support-our-mission" activeClassName="active">
+                <span>Support our mission</span>
+              </StyledLink>
+              <Line />
+              <Button to="/beta">Download Free App</Button>
+            </Nav>
+          </>
         )}
       </NavWrapper>
     </StyledHeader>
