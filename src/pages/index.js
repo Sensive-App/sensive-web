@@ -128,6 +128,7 @@ const Hero = styled(FlexContainer)`
 `
 
 const Col = styled.div`
+  flex: 1;
   padding-right: 40px;
 
   @media (max-width: 480px) {
@@ -180,11 +181,12 @@ const IndexPage = () => (
         {/* <h4>A psychological profile</h4> */}
 
         <p>
-          Using a pshycological technique called <i>profile of mood states</i>{" "}
-          or <strong>POMS</strong>. With that we establish a daily score,{" "}
-          <i>total mood disturbance score</i> or <strong>TMDS</strong>. This
-          allows us to accuretly and precisley monitor your mood through
-          self-reporting.{" "}
+          Sensive uses a psychological technique called profile of mood states{" "}
+          <strong>(POMS)</strong> to establish your own personal profile. By
+          simply tracking your mood states throughout the day, Sensive can
+          establish a daily score called your total mood disturbance score or{" "}
+          <strong> TMDS</strong> . This helps monitor your mood – which is the
+          basis for positive changes.
         </p>
         {/* <RedLink>Learn More</RedLink> */}
       </Col>
@@ -192,10 +194,11 @@ const IndexPage = () => (
         <h3>Daily Journaling</h3>
         {/* <h4>Writing for yourself</h4> */}
         <p>
-          Through the use of daily journaling we help you establish a deeper
-          check with yourself. A place for contemplating but yet breif top of
-          mind free flowing text. This in combination with your{" "}
-          <strong>TMDS</strong> becomes the baseline for your daily routine.
+          By just recording free flowing thoughts, emotions and reflections
+          throughout your day in the Sensive app, it gives you the place to
+          establish a deeper check in with yourself. Sensive takes this
+          information in combination with your TMDS, to create the baseline for
+          your day-to-day life.
         </p>
         {/* <RedLink>Learn More</RedLink> */}
       </Col>
@@ -203,10 +206,10 @@ const IndexPage = () => (
         <h3>Atomic Habits</h3>
         {/* <h4>Daily actions towards positive routines </h4> */}
         <p>
-          You can customize what habits you want to track during your daily
-          routine. You can also at any point during the day track a habit, we
-          suggest you start with simple easy to complete habits and build up to
-          more complex habits.
+          Everyday actions can alter our mood and emotions in any direction. To
+          harness the positive power of these in your day, Sensive enables you
+          to track a variety of daily actions or habits so that you can build
+          them into a positive routine. (Coming soon)
         </p>
         {/* <RedLink>Learn More</RedLink> */}
       </Col>
@@ -217,8 +220,8 @@ const IndexPage = () => (
         <Circle size={100} />
         <TextQuote>
           Sensive is built around you. Our daily routine is a brief moment of
-          quiet each day when you touch base with your emotions and state of
-          mind.
+          quiet each day to give you time to touch base with your emotions and
+          state of mind.
         </TextQuote>
       </Callout>
 

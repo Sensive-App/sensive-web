@@ -172,24 +172,23 @@ const SupportOurMissionPage = () => {
           Sensives mission has always been to inspire thoughtfulness and
           curiosity about the incredible minds we all share. In these uncertain
           times, it’s more important than ever that we have a place to keep that
-          sense of awe alive. Our new membership program aims to help
-          strentgthen our ability to stay independant and continue to develop
-          our app and unite our community so that Sensive can continue to
-          thrive.
+          sense of awe alive. Our new membership program aims to help strengthen
+          our ability to stay independent and continue to develop our app and
+          unite our community so that Sensive can thrive.
           <br />
           <br />
           By becoming a founding member, you’re joining a community of
-          like-minded mind lovers who believe deeply in Sensives mission. Your
+          like-minded mind lovers who believe deeply in Sensive's mission. Your
           direct support allows our small team to help improve mental heath,
           develop and build great software, and continue building out our
-          knowledge about pshycological health. Oh, and you’ll get some pretty
+          knowledge about psychological health. Oh, and you’ll get some pretty
           great perks, too.
         </Text40>
 
         <h2>Become a Member </h2>
         <Text>
           Support Sensive and its development with a contribution of at least $5
-          per month or $500 per year. We want to stay independant and your
+          per month or $500 per year. We want to stay independent and your
           contribution helps us do that.
         </Text>
         <Line />
@@ -225,7 +224,7 @@ const SupportOurMissionPage = () => {
             <ListLi>
               <strong>Future members-only experiences and perks</strong>,
               including video chats with our co-founders, mental coaches,
-              cognitive theraphist and thought leaders.
+              cognitive therapist and thought leaders.
             </ListLi>
             <ListLi>
               A <strong>$100 credit</strong> toward future app subscriptions*
