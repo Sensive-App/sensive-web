@@ -111,15 +111,29 @@ const Hero = styled(FlexContainer)`
   margin-top: -72px;
   margin-left: -40px;
 
+  h1 {
+    margin-bottom: 12px;
+  }
+
   @media (max-width: 480px) {
     margin-top: 0px;
     margin-left: 0px;
     margin-bottom: 100px;
+
+    a {
+      margin-top: 24px;
+      align-self: center;
+    }
   }
 `
 
 const Col = styled.div`
   padding-right: 40px;
+
+  @media (max-width: 480px) {
+    padding-right: 0px;
+    padding-bottom: 40px;
+  }
 
   &:last-of-type {
     padding-right: 0px;
@@ -133,12 +147,13 @@ const IndexPage = () => (
     <FlexContainer rows center bottom="0px">
       <PhoneFrame></PhoneFrame>
       <Hero>
-        <h1>Mental Health</h1>
+        <h1>Tracking your mental wellbeing</h1>
         <IngressText>
+          {/* Mental health is a fundamental part of our overall wellbeing.  */}
           To better understand your mental health, you need to ask yourself
-          questions, often and on routine. We help you do that. Sensive uses
-          psychological backed profiling techniques to help you gain insights to
-          your mood over time and how to improve it.
+          questions, often and on routine. This is where we come in. Sensive
+          uses psychological backed profiling techniques to help you gain
+          insights to your mood over time and how to improve it.
         </IngressText>
         <Link to="/beta">
           <img src={appstore} alt="Download on the App Store" height={50} />
@@ -150,8 +165,9 @@ const IndexPage = () => (
       <FlexContainer justifyCenter>
         <h2>Built around you.</h2>
         <Text>
-          Sensive is built around you. By having a daily check-in with yourself
-          you’ll slowly learn more about yourself and discover ways to improve
+          Sensive is tailored to you. By having a daily check-in you’ll begin to
+          learn more about yourself, building up an overview of your mood and
+          learning how they impact your mental state along with ways to improve
           your mood and mental state of mind.{" "}
         </Text>
       </FlexContainer>
@@ -160,7 +176,9 @@ const IndexPage = () => (
 
     <FlexContainer rows bottom="100px">
       <Col>
-        <h3>POMS & TMDS</h3>
+        <h3>POMS &amp; TMDS</h3>
+        {/* <h4>A psychological profile</h4> */}
+
         <p>
           Using a pshycological technique called <i>profile of mood states</i>{" "}
           or <strong>POMS</strong>. With that we establish a daily score,{" "}
@@ -172,6 +190,7 @@ const IndexPage = () => (
       </Col>
       <Col>
         <h3>Daily Journaling</h3>
+        {/* <h4>Writing for yourself</h4> */}
         <p>
           Through the use of daily journaling we help you establish a deeper
           check with yourself. A place for contemplating but yet breif top of
@@ -182,6 +201,7 @@ const IndexPage = () => (
       </Col>
       <Col>
         <h3>Atomic Habits</h3>
+        {/* <h4>Daily actions towards positive routines </h4> */}
         <p>
           You can customize what habits you want to track during your daily
           routine. You can also at any point during the day track a habit, we
@@ -196,9 +216,9 @@ const IndexPage = () => (
       <Callout rows center>
         <Circle size={100} />
         <TextQuote>
-          Sensive is built around you. By having a daily check-in with yourself.
-          This daily routine is a quiet breif moment each day when you touch
-          base with your emotions and state of mind.
+          Sensive is built around you. Our daily routine is a brief moment of
+          quiet each day when you touch base with your emotions and state of
+          mind.
         </TextQuote>
       </Callout>
 
