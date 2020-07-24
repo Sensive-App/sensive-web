@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Sensive, Track your mood daily using our App.`,
-    description: `A simple app that helps you get data on your mood using a daily routine to ask you important questions. Improves over time with deeper insights and suggestions on how to imrove your mood and mental health.`,
+    description: `A simple app that helps you get data on your mood using a daily routine to ask important questions. Improves over time with deeper insights and suggestions on how to improve your mood and mental health.`,
     author: `Sensive.xyz`,
   },
   plugins: [
