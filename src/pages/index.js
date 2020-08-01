@@ -153,7 +153,7 @@ const IndexPage = () => (
           {/* Mental health is a fundamental part of our overall wellbeing.  */}
           To better understand your mental health, you need to ask yourself
           questions, often and on routine. This is where we come in. Sensive
-          uses psychological backed profiling techniques to help you gain
+          uses psychologically backed profiling techniques to help you gain
           insights to your mood over time and how to improve it.
         </IngressText>
         <Link to="/beta">
