@@ -3,7 +3,6 @@ import React, { useLayoutEffect, useState } from "react"
 import styled from "styled-components"
 import { motion, useCycle } from "framer-motion"
 
-import logo from "../images/logo.png"
 import { Circle } from "./circle"
 import { MenuToggle } from "./menuToggle"
 
@@ -142,7 +141,7 @@ export const Header = () => {
           <>
             <Link to="/">
               <Nav>
-                <Icon src={logo} alt="logo" />
+                {/* <Icon src={logo} alt="logo" /> */}
                 <Circle time={15} />
               </Nav>
             </Link>
@@ -168,7 +167,7 @@ export const Header = () => {
           <>
             <Link to="/">
               <Nav>
-                <Icon src={logo} alt="logo" />
+                {/* <Icon src={logo} alt="logo" /> */}
                 <Circle time={15} />
               </Nav>
             </Link>
