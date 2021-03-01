@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Sensive, Track your mood daily using our App.`,
+    title: `Sensive, Track your mood daily.`,
+    site: "https://www.sensive.xyz",
+    siteUrl: "https://www.sensive.xyz",
     description: `A simple app that helps you get data on your mood using a daily routine to ask important questions. Improves over time with deeper insights and suggestions on how to improve your mood and mental health.`,
-    author: `Sensive.xyz`,
+    author: `sensive.xyz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,7 +18,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
         trackingId: "UA-168251433-1",
       },
     },
