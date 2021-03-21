@@ -156,7 +156,7 @@ const IndexPage = () => (
           uses psychologically backed profiling techniques to help you gain
           insights to your mood over time and how to improve it.
         </IngressText>
-        <Link to="/beta">
+        <Link to="https://apps.apple.com/app/sensive-mood-tracking/id1513799237">
           <img src={appstore} alt="Download on the App Store" height={50} />
         </Link>
       </Hero>

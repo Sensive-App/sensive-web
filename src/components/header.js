@@ -156,7 +156,7 @@ export const Header = () => {
                 >
                   Support our mission
                 </MobileMenuLink>
-                <MobileMenuLink to="/beta" activeClassName="active">
+                <MobileMenuLink to="https://apps.apple.com/app/sensive-mood-tracking/id1513799237" activeClassName="active">
                   Download Free App
                 </MobileMenuLink>
               </Background>
@@ -179,7 +179,7 @@ export const Header = () => {
                 <span>Support our mission</span>
               </StyledLink>
               <Line />
-              <Button to="/beta">Download Free App</Button>
+              <Button to="https://apps.apple.com/app/sensive-mood-tracking/id1513799237">Download Free App</Button>
             </Nav>
           </>
         )}

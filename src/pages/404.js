@@ -43,7 +43,7 @@ const NotFoundPage = () => (
       <Text>
         We don’t know why you ended up here. But one thing is certain you should
         not stick around. It’s dangerous and semi-spoky here.{" "}
-        <RedLink to="/beta">Download our app</RedLink>
+        <RedLink to="https://apps.apple.com/app/sensive-mood-tracking/id1513799237">Download our app</RedLink>
       </Text>
       <SmallText>404 Sorry. had to put this here. Developer made me.</SmallText>
     </Wrapper>
