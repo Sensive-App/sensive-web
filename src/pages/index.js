@@ -7,7 +7,7 @@ import appstore from "../images/appstore-btn.png"
 import ok from "../images/ok.png"
 import suckedin from "../images/sucked-in.png"
 import circles from "../images/circles.png"
-import phoneFrame from "../images/iphone-x-frame-1.png"
+import phoneFrame from "../images/iphone_frame_sensive_mar_2021.png"
 import { Circle } from "../components/circle"
 
 const Text = styled.p`
