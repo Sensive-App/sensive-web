@@ -143,7 +143,7 @@ const Col = styled.div`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Sensive" />
 
     <FlexContainer rows center bottom="0px">
       <PhoneFrame></PhoneFrame>
