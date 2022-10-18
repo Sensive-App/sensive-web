@@ -165,7 +165,7 @@ const SupportOurMissionPage = () => {
   return (
     <Layout>
       <Wrapper>
-        <SEO title="Support Our Mission" />
+        <SEO title="Support Our Mission..." />
         <Img src={workhard} alt="Work Hard" />
         <h1>Support Our Mission</h1>
         <Text40>
