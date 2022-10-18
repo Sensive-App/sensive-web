@@ -167,7 +167,7 @@ const SupportOurMissionPage = () => {
       <Wrapper>
         <SEO title="Support Our Mission..." />
         <Img src={workhard} alt="Work Hard" />
-        <h1>Support Our Mission</h1>
+        <h1>Support our mission</h1>
         <Text40>
           Sensives mission has always been to inspire thoughtfulness and
           curiosity about the incredible minds we all share. In these uncertain
