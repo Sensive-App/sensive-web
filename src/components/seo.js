@@ -27,7 +27,7 @@ function SEO({ description, lang, meta, title }) {
   // )
 
   // const metaDescription = description || site.siteMetadata.description
-  const metaDescription = `A simple app that helps you get data on your mood using a daily routine to ask important questions. Improves over time with deeper insights and suggestions on how to improve your mood and mental health.`
+  const metaDescription = `Self-care, mood tracking & journaling with insights and statistics paired with Apple Health. Sensive is built using a scientific mood tracking method called POMS. Set weekly intentions and upload photos to your private journal.`
 
   return (
     <Helmet
