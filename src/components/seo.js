@@ -36,7 +36,7 @@ function SEO({ description, lang, meta, title }) {
       }}
       title={title}
       // titleTemplate={`%s | ${site.siteMetadata.title}`}
-      titleTemplate={`%s | ${`Sensive, Track your mood daily.`}`}
+      titleTemplate={`%s | ${`Mood Tracking & Journaling, made simple | Sensive`}`}
       meta={[
         {
           name: `description`,
