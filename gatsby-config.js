@@ -3,7 +3,7 @@ module.exports = {
     title: `Mood Tracking & Journaling, made simple`,
     site: "https://www.sensive.xyz",
     siteUrl: "https://www.sensive.xyz",
-    description: `Self-care, mood tracking & journaling with insights and statistics paired with Apple Health. Sensive is built using a scientific mood tracking method called POMS. Set weekly intentions and upload photos to your private journal.`,
+    description: `Self-care, mood tracking & journaling with insights and statistics paired with Apple Health. Sensive is built using a scientific mood tracking method called POMS. Set weekly intentions and upload photos to your private journal..`,
     author: `sensive.xyz`,
   },
   plugins: [
